@@ -2,10 +2,11 @@
 from django.contrib import admin
 from django.urls import path,include
 from django.contrib.sitemaps.views import sitemap
-from blog.sitemaps import PostSitemap
+from blog.sitemaps import PostSitemap,TagSitemap
 sitemaps = {
     
     'posts':PostSitemap,
+    'tags': TagSitemap,
 }
 
 
