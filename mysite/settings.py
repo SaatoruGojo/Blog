@@ -146,4 +146,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-ALLOWED_HOSTS = ['blog-rypz.onrender.com']
+ALLOWED_HOSTS = ['.onrender.com']
+
