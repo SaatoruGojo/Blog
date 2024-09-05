@@ -33,8 +33,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-#DEBUG = config('DEBUG', default=False, cast=bool)
+#DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = []
 SITE_ID=1
@@ -90,13 +90,17 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': config('DB_NAME'),
         'USER':config('DB_USER'),
         'PASSWORD':config('DB_PASSWORD'),
-        'HOST':config('DB_HOST')
+        'HOST':config('DB_HOST'),
+        'PORT':config('DB_PORT', default='5432')
     }
 }
 
